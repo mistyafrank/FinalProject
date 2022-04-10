@@ -1,0 +1,224 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@900&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Righteous', cursive;
+  color: #17e3f6;
+  font-size: 19px;
+  background-color: #222222;
+  background-image: radial-gradient(rgb(1, 3, 17) 20%,
+      #34043d 30%,
+      rgb(1, 3, 17) 60%);
+}
+
+.home_ul {
+  list-style-type: none;
+  position: relative;
+  z-index: 3;
+  text-align: center;
+  opacity: .8;
+
+}
+
+h1 {
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 20px;
+  font-size: 45px;
+  padding-left: 25px;
+  padding-right: 25px;
+
+}
+.comment_input {
+  justify-content: center;
+}
+
+header {
+  font-size: x-large;
+  text-decoration: underline;
+}
+
+/*nav bar style*/
+
+.navbar {
+  background-color: rgba(12, 11, 11, 0.8);
+  display: flex;
+  justify-content: center;
+}
+
+a {
+  color: #17e3f6;
+}
+
+.link {
+  color: #17e3f6;
+}
+
+.navlink,
+  {
+  display: inline-block;
+  padding: 3px 20px;
+  font-size: 16px;
+  text-decoration: none;
+  transition: 0.3s ease all;
+}
+
+.link:hover,
+a:hover {
+  color: #4e5253;
+  transform: scale(1.2);
+}
+
+/*style for homepage*/
+
+@keyframes move-twink-back {
+  from {
+    background-position: 0 0;
+  }
+
+  to {
+    background-position: -10000px 5000px;
+  }
+}
+
+@keyframes move-clouds-back {
+  from {
+    background-position: 0 0;
+  }
+
+  to {
+    background-position: 10000px 0;
+  }
+}
+
+.stars,
+.twinkling,
+.clouds {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.stars {
+  background: #000 url(stars.png) repeat top center;
+  z-index: 0;
+}
+
+.twinkling {
+  background: transparent url(twinkling.png) repeat top center;
+  z-index: 1;
+  opacity: .7;
+  animation: move-twink-back 200s linear infinite;
+}
+
+.clouds {
+  background: transparent url(clouds.png) repeat top center;
+  z-index: 2;
+  opacity: .7;
+  animation: move-clouds-back 200s linear infinite;
+}
+
+
+.title {
+  font-size: 65px;
+  font-family: 'Orbitron', 'Lato', sans-serif;
+  margin-top: 4em;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+
+
+  color: #ffffff;
+  background: -webkit-linear-gradient(#eee, #333);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 6px 6px 0px rgba(0, 0, 0, 0.2);
+
+  display: block;
+  position: relative;
+}
+
+/*style for dailyimagepage*/
+
+.nasa-photo {
+  display: flex;
+  padding: 40px;
+  margin: 0 auto;
+  max-height: 100%;
+}
+
+.nasa-photo img {
+  width: 50%;
+  margin-right: 50px;
+  object-fit: contain;
+  max-height: 80vh;
+
+}
+
+.nasa-photo h1 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.nasa-photo .date {
+  margin-top: 0;
+  margin-bottom: 30px;
+}
+
+.nasa-photo .explanation {
+  color: #bbb;
+}
+
+@media (max-width: 1280px) {
+  .nasa-photo {
+    display: block;
+  }
+}
+
+/*style for comment page*/
+
+.create__comments {
+  display: flex;
+  height: 40vh;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.comment_input {
+  height: 50px;
+  width: 100%;
+  border-radius: 5px;
+}
+
+input[type=submit]:hover {
+  background-color: #17e3f6;
+}
+
+.container {
+  border-radius: 5px;
+  padding: 20px;
+}
+
+textarea {
+  width: 100%;
+  border-radius: 5px;
+  height: 250px;
+}
+
+button {
+  height: 50px;
+  width: 100% !important;
+  align-items: center;
+  margin-top: 10px;
+  border-radius: 10px;
+  font-size: 20px;
+  background-color: #17e3f6;
+  color: rgb(88, 1, 88);
+}
